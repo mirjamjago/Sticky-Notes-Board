@@ -1,0 +1,160 @@
+h1{
+    font-size:x-large;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.buttonAdd{
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 2px;
+  top:0;
+  right:0;
+  background: none;
+  border: none;
+}
+
+.container{
+  padding-top: 10px;
+  width: 300px;
+  height: 250px;
+  z-index: 5;
+  position: absolute;
+margin-left: 35%;
+--paper-dark: #e5c93d;
+  --paper-color: #ffed87;
+  background: linear-gradient(
+    135deg,
+    var(--paper-dark),
+    30%,
+    var(--paper-color)
+  );
+  box-shadow: 3px 3px 2px var(--paper-shadow);
+  transform-origin: top left;
+}
+
+label{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: bold;
+}
+
+
+#description {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 10px;
+  max-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: none;
+  border-color: black;
+}
+
+#title {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 10px;
+  width: 100%;
+  background: none;
+  border-color: black;
+}
+
+.modal-footer{
+position: relative;
+margin-top: 20px;
+padding: 7px;
+}
+
+
+#addButton{
+  background: #d8c83d;
+  border: 1PX SOLID BLACK;
+  border-radius: 5PX;
+  color: white;
+  text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#addButton:active{
+  background: rgb(214, 162, 51);
+}
+
+#innerContainer{
+  display: flex;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 20px;
+  min-width: 200px;
+  min-height: 150px;
+  --paper-dark: #e5c93d;
+  --paper-color: #ffed87;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--paper-dark),
+    30%,
+    var(--paper-color)
+  );
+  box-shadow: 3px 3px 2px var(--paper-shadow);
+  transform-origin: top left;
+}
+
+
+.noteTitle{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: bold;
+  font-size: small;
+  margin-left: 20px;
+  margin-right: 5px;
+  
+}
+
+.noteDescription{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size:x-small;
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 5px;
+  white-space: pre-wrap;
+}
+
+.change{
+  margin-top: 0px;
+  margin-left: 0px;
+  top:0;
+  left:0;
+  background: none;
+  border: none;
+}
+
+.delete{
+  margin-top: 2px;
+  margin-left: 2px;
+  top:0;
+  left:0;
+  background: none;
+  border: none;
+}
+
+.NotesButtonsContainer{
+  position: relative;
+  padding: 0;
+margin-left: 0px;
+margin-top: 0px;
+}
+
+.notes{
+  margin-left:25px
+}
+
+
+
+
+
+
+
+
+

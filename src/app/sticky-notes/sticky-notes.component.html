@@ -1,0 +1,64 @@
+<section>
+<div class="container-fluid p-1 text-black">
+    <h1> 
+        <span>Sticky Notes Board</span>
+        <button class="buttonAdd" (click)="showForm = !showForm" >
+            <i class="fa fa-plus"></i>
+            </button>
+    </h1>
+  </div>
+  <div *ngIf="showForm">
+      <section>
+          <div class="container">
+              <div>
+                  <div>
+                  <label for="Title">Title:</label>
+                  <input class="form-control" [(ngModel)]="newTitle" id="title" placeholder="Enter the Title..." >
+                  <label for="Description">Description:</label>
+                  <textarea class="form-control" id="description" rows="4"  [(ngModel)]="newDescription" placeholder="Describe the task..."></textarea>
+                </div>
+           
+            </div>
+                <div class="modal-footer">
+                    <button class="button" id="addButton" (click)="onAddSticker();hideForm();" >ADD</button>
+                </div>
+          </div>
+      </section>
+</div>
+<ol class="notes">
+    <div style="display:inline-block" *ngFor="let stickyNotes of stickyNotesList">
+    <li class="row" style='padding-right: 6px' id="innerContainer" *ngIf="showInnerContainer">
+        <div class="NotesButtonsContainer">
+            <button (click)="currentStickyNoteForEdit = stickyNotes" class="change"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button (click)="onDeleteStickyNote(stickyNotes)" class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </div>
+    <span class="col">
+        <div class="col" *ngIf="currentStickyNoteForEdit && currentStickyNoteForEdit.id === stickyNotes.id; then editTitle else showTitle">
+
+        </div>
+        <ng-template #editTitle> 
+            <input class="form-control" [(ngModel)]="stickyNotes.title" id="title">
+        </ng-template>
+        <ng-template #showTitle>
+            <p class="noteTitle">{{stickyNotes.title}}</p>
+        </ng-template>
+
+        <div class="col" *ngIf="currentStickyNoteForEdit && currentStickyNoteForEdit.id === stickyNotes.id; then editDescription else showDescription"></div>
+        <ng-template #editDescription>
+            <textarea class="form-control" id="description" rows="4"  [(ngModel)]="stickyNotes.description"></textarea>
+            <button class="button" id="addButton" (click)="onEditStickyNote(stickyNotes);" >UPDATE</button>
+        </ng-template>
+            <ng-template #showDescription>
+                <p class="noteDescription">{{stickyNotes.description}}</p>
+            </ng-template>
+        </span>
+    </li>
+</div>
+</ol>
+</section>
+
+
+
+
+
+

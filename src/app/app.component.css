@@ -1,0 +1,14 @@
+body {
+    height:100%;  
+    width:1280px;
+    background-image: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg");
+    background-size: 1300px;
+    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+    border-image-slice: 31 29;
+    border-image-width: 10px 10px;
+    overflow: auto;
+    position: absolute;
+    background-repeat: repeat;
+  }
+
+
